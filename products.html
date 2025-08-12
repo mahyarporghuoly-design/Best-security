@@ -1,509 +1,0 @@
-<!DOCTYPE html>
-<html lang="fa">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>محصولات - Best Security</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    /* جزئیات کوچک برای حالت placeholder تصاویر و هماهنگی شبکه محصولات */
-    main { max-width:1200px; margin:40px auto; padding:0 15px; }
-    .products-page h2 { text-align:center; color:#ffcc00; margin-bottom:20px; font-size:2rem; }
-    .category { margin-bottom:40px; }
-    .category h3 { color:#ffd76a; margin-bottom:12px; text-align:right; padding-right:6px; }
-    .products-grid { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
-    .card { background:#1f1f1f; width:260px; border-radius:12px; padding:14px; box-shadow:0 0 10px #000; text-align:right; }
-    .img-placeholder { width:100%; height:140px; border-radius:8px; background:linear-gradient(135deg,#252525,#151515); display:flex; align-items:center; justify-content:center; color:#a9a9a9; margin-bottom:12px; font-size:0.95rem; }
-    .card h4 { color:#ffcc00; margin-bottom:8px; font-size:1.02rem; }
-    .card p.desc { color:#cfcfcf; font-size:0.92rem; margin-bottom:8px; min-height:36px; }
-    .price { color:#ffcc00; font-weight:700; margin-bottom:10px; }
-    .card button { background:#ffcc00; border:none; padding:10px; width:100%; border-radius:8px; font-weight:700; cursor:pointer; }
-    .card button:hover { background:#e6b800; }
-    /* footer note */
-    .footer-note { background:#171717; color:#bbb; padding:18px; border-top:1px solid #2a2a2a; margin-top:40px; text-align:center; }
-    @media (max-width:600px) {
-      .card { width:100%; max-width:420px; }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div style="text-align:center; padding:22px; background:#1e1e1e; border-bottom:3px solid #ffcc00;">
-      <a href="index.html" style="text-decoration:none; color:#ffcc00; font-size:1.8rem; font-weight:800;">Best Security</a>
-      <div style="color:#ddd; margin-top:6px;">محصولات و تجهیزات نصب و راه‌اندازی</div>
-    </div>
-  </header>
-
-  <nav class="main-nav" style="display:flex; gap:18px; justify-content:center; padding:14px 0; background:#222;">
-    <a href="index.html" class="active">خانه</a>
-    <a href="products.html">محصولات</a>
-    <a href="about.html">درباره ما</a>
-    <a href="contact.html">تماس با ما</a>
-    <a href="cart.html" style="margin-left:auto;">🛒 سبد خرید</a>
-  </nav>
-
-  <main>
-    <section class="products-page">
-      <h2>فهرست محصولات — نصب دوربین، شبکه/سانترال، برق و دزدگیر</h2>
-
-      <!-- دسته 1: تجهیزات نصب دوربین مداربسته (20) -->
-      <div class="category">
-        <h3>تجهیزات نصب دوربین مداربسته</h3>
-        <div class="products-grid">
-          <article class="card">
-            <div class="img-placeholder">تصویر دوربین (قابل افزودن)</div>
-            <h4>دوربین بولت 2MP دید در شب</h4>
-            <p class="desc">دوربین بولت با کیفیت 2 مگاپیکسل و دید در شب مناسب فضاهای بیرونی</p>
-            <div class="price">۱,۲۰۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('دوربین بولت 2MP دید در شب',1200000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">تصویر دوربین (قابل افزودن)</div>
-            <h4>دوربین دام 2MP ضد آب</h4>
-            <p class="desc">دام ضدآب مناسب نصب بیرونی با پوشش حفاظتی</p>
-            <div class="price">۱,۳۵۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('دوربین دام 2MP ضد آب',1350000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">تصویر دوربین (قابل افزودن)</div>
-            <h4>دوربین تحت شبکه 5MP لنز ثابت</h4>
-            <p class="desc">دوربین IP با رزولوشن 5 مگاپیکسل و لنز ثابت</p>
-            <div class="price">۲,۵۰۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('دوربین تحت شبکه 5MP لنز ثابت',2500000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">تصویر دوربین (قابل افزودن)</div>
-            <h4>دوربین اسپیددام زوم 20X</h4>
-            <p class="desc">اسپیددام با زوم اپتیکال 20 برابر، مناسب نظارت دوربرد</p>
-            <div class="price">۵,۸۰۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('دوربین اسپیددام زوم 20X',5800000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">تصویر</div>
-            <h4>دوربین آنالوگ AHD 1080p</h4>
-            <p class="desc">دوربین آنالوگ AHD با کیفیت 1080p، اقتصادی</p>
-            <div class="price">۹۰۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('دوربین آنالوگ AHD 1080p',900000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">تصویر</div>
-            <h4>دوربین مداربسته وایرلس دو آنتن</h4>
-            <p class="desc">دوربین وایرلس با آنتن تقویتی، مناسب خانه</p>
-            <div class="price">۱,۷۵۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('دوربین وایرلس دو آنتن',1750000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">تصویر</div>
-            <h4>DVR چهار کانال</h4>
-            <p class="desc">دستگاه DVR چهار کانال برای ضبط تصاویر آنالوگ</p>
-            <div class="price">۱,۴۰۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('DVR چهار کانال',1400000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">تصویر</div>
-            <h4>DVR هشت کانال</h4>
-            <p class="desc">DVR با پشتیبانی 8 کانال و قابلیت ضبط مداوم</p>
-            <div class="price">۱,۸۰۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('DVR هشت کانال',1800000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">تصویر</div>
-            <h4>DVR شانزده کانال</h4>
-            <p class="desc">DVR حرفه‌ای برای پروژه‌های بزرگ 16 کاناله</p>
-            <div class="price">۲,۳۰۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('DVR شانزده کانال',2300000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">تصویر</div>
-            <h4>NVR هشت کانال</h4>
-            <p class="desc">NVR برای دوربین‌های IP با پشتیبانی 8 کانال</p>
-            <div class="price">۲,۰۰۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('NVR هشت کانال',2000000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">تصویر</div>
-            <h4>NVR شانزده کانال</h4>
-            <p class="desc">NVR برای پروژه‌های حرفه‌ای تا 16 دوربین</p>
-            <div class="price">۲,۶۰۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('NVR شانزده کانال',2600000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">تصویر</div>
-            <h4>هارد 1 ترابایت Surveillance</h4>
-            <p class="desc">هارد مخصوص نظارت CCTV، ظرفیت 1TB</p>
-            <div class="price">۱,۳۵۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('هارد 1TB Surveillance',1350000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">تصویر</div>
-            <h4>هارد 2 ترابایت Surveillance</h4>
-            <p class="desc">هارد ویژه ضبط تصاویر دوربین، 2TB</p>
-            <div class="price">۲,۱۰۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('هارد 2TB Surveillance',2100000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">تصویر</div>
-            <h4>هارد 4 ترابایت Surveillance</h4>
-            <p class="desc">ظرفیت بالا برای ضبط طولانی مدت و پروژه‌های بزرگ</p>
-            <div class="price">۳,۶۰۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('هارد 4TB Surveillance',3600000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">تصویر کابل</div>
-            <h4>کابل کواکسیال RG59 (هر متر)</h4>
-            <p class="desc">کابل تصویر استاندارد برای دوربین‌های آنالوگ</p>
-            <div class="price">۱۲,۰۰۰ تومان</div>
-            <button onclick="addToCart('کابل RG59 - 1m',12000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">تصویر کابل</div>
-            <h4>کابل ترکیبی برق و تصویر RG59 (هر متر)</h4>
-            <p class="desc">کابل ترکیبی برای تسهیل نصب دوربین و تغذیه</p>
-            <div class="price">۱۸,۰۰۰ تومان</div>
-            <button onclick="addToCart('کابل ترکیبی RG59 - 1m',18000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">کانکتور</div>
-            <h4>فیش BNC پیچی</h4>
-            <p class="desc">کانکتور BNC نوع پیچی برای کابل RG</p>
-            <div class="price">۸,۰۰۰ تومان</div>
-            <button onclick="addToCart('فیش BNC پیچی',8000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">کانکتور</div>
-            <h4>فیش BNC پرسی</h4>
-            <p class="desc">کانکتور BNC نوع پرسی برای نصب سریع</p>
-            <div class="price">۷,۰۰۰ تومان</div>
-            <button onclick="addToCart('فیش BNC پرسی',7000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">پاور</div>
-            <h4>فیش پاور نری پیچی</h4>
-            <p class="desc">فیش تغذیه نری مناسب دوربین‌ها</p>
-            <div class="price">۵,۰۰۰ تومان</div>
-            <button onclick="addToCart('فیش پاور نری پیچی',5000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">پاور</div>
-            <h4>فیش پاور مادگی پیچی</h4>
-            <p class="desc">مادگی تغذیه برای اتصال آداپتورها</p>
-            <div class="price">۵,۰۰۰ تومان</div>
-            <button onclick="addToCart('فیش پاور مادگی پیچی',5000)">افزودن به سبد خرید</button>
-          </article>
-        </div>
-      </div>
-
-      <!-- دسته 2: تجهیزات شبکه و سانترال (15) -->
-      <div class="category">
-        <h3>تجهیزات شبکه و سانترال</h3>
-        <div class="products-grid">
-          <article class="card">
-            <div class="img-placeholder">کابل شبکه</div>
-            <h4>کابل شبکه CAT5e (هر متر)</h4>
-            <p class="desc">کابل UTP مناسب شبکه‌های محلی</p>
-            <div class="price">۹,۰۰۰ تومان</div>
-            <button onclick="addToCart('کابل شبکه CAT5e - 1m',9000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">کابل شبکه</div>
-            <h4>کابل شبکه CAT6 (هر متر)</h4>
-            <p class="desc">کابل با پهنای باند بالاتر برای پروژه‌های پرسرعت</p>
-            <div class="price">۱۲,۰۰۰ تومان</div>
-            <button onclick="addToCart('کابل شبکه CAT6 - 1m',12000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">سوئیچ</div>
-            <h4>سوئیچ 8 پورت گیگابیت</h4>
-            <p class="desc">سوئیچ اقتصادی برای دفاتر کوچک</p>
-            <div class="price">1,050,000 تومان</div>
-            <button onclick="addToCart('سوئیچ 8 پورت گیگابیت',1050000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">سوئیچ</div>
-            <h4>سوئیچ 16 پورت گیگابیت</h4>
-            <p class="desc">سوئیچ برای شبکه‌های متوسط با پورت‌های بیشتر</p>
-            <div class="price">1,950,000 تومان</div>
-            <button onclick="addToCart('سوئیچ 16 پورت گیگابیت',1950000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">پچ پنل</div>
-            <h4>پچ پنل 24 پورت CAT6</h4>
-            <p class="desc">مدیریت کابل‌ها در رک شبکه</p>
-            <div class="price">۸۵۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('پچ پنل 24 پورت CAT6',850000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">پچ پنل</div>
-            <h4>پچ پنل 48 پورت CAT6</h4>
-            <p class="desc">برای شبکه‌های بزرگ و مراکز داده کوچک</p>
-            <div class="price">۱,۴۰۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('پچ پنل 48 پورت CAT6',1400000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">رک</div>
-            <h4>رک دیواری 9 یونیت</h4>
-            <p class="desc">رک کوچک برای نصب تجهیزات شبکه</p>
-            <div class="price">۱,۱۰۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('رک دیواری 9 یونیت',1100000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">رک</div>
-            <h4>رک ایستاده 22 یونیت</h4>
-            <p class="desc">رک بزرگ برای نصب سرورها و سوئیچ‌ها</p>
-            <div class="price">۳,۸۰۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('رک ایستاده 22 یونیت',3800000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">پچ کورد</div>
-            <h4>پچ کورد 1 متری CAT6</h4>
-            <p class="desc">کابل رابط کوتاه برای پنل و سوئیچ</p>
-            <div class="price">۲۵,۰۰۰ تومان</div>
-            <button onclick="addToCart('پچ کورد 1m CAT6',25000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">پچ کورد</div>
-            <h4>پچ کورد 3 متری CAT6</h4>
-            <p class="desc">پچ کورد بلندتر برای انعطاف بیشتر</p>
-            <div class="price">۴۵,۰۰۰ تومان</div>
-            <button onclick="addToCart('پچ کورد 3m CAT6',45000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">سوکت</div>
-            <h4>سوکت شبکه RJ45 CAT6</h4>
-            <p class="desc">سوکت استاندارد برای کابل‌های CAT6</p>
-            <div class="price">۱,۵۰۰ تومان</div>
-            <button onclick="addToCart('سوکت RJ45 CAT6',1500)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">تستر</div>
-            <h4>تستر کابل شبکه</h4>
-            <p class="desc">تست ارتباط و سیم‌بندی کابل شبکه</p>
-            <div class="price">۱۵۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('تستر کابل شبکه',150000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">پانچ</div>
-            <h4>پانچ پنل و سوکت شبکه (کیت)</h4>
-            <p class="desc">ابزار نصب و پانچ کابل‌ها</p>
-            <div class="price">۲۵۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('کیت پانچ پنل و سوکت',250000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">سانترال</div>
-            <h4>سانترال پاناسونیک KX-TES824</h4>
-            <p class="desc">سیستم تلفن سانترال برای کسب‌وکارهای کوچک</p>
-            <div class="price">۴,۵۰۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('سانترال KX-TES824',4500000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">تلفن</div>
-            <h4>تلفن سانترال KX-T7730</h4>
-            <p class="desc">تلفن حرفه‌ای مخصوص سانترال پاناسونیک</p>
-            <div class="price">۱,۲۰۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('تلفن KX-T7730',1200000)">افزودن به سبد خرید</button>
-          </article>
-        </div>
-      </div>
-
-      <!-- دسته 3: تجهیزات برق ساختمان و دزدگیر (15) -->
-      <div class="category">
-        <h3>تجهیزات برق ساختمان و دزدگیر</h3>
-        <div class="products-grid">
-          <article class="card">
-            <div class="img-placeholder">کابل برق</div>
-            <h4>کابل برق افشان 2×1.5 (هر متر)</h4>
-            <p class="desc">کابل افشان مناسب روشنایی و پریزهای سبک</p>
-            <div class="price">۱۸,۰۰۰ تومان</div>
-            <button onclick="addToCart('کابل برق 2×1.5 - 1m',18000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">کابل برق</div>
-            <h4>کابل برق افشان 2×2.5 (هر متر)</h4>
-            <p class="desc">برای پریزها و مدارهای پرمصرف‌تر</p>
-            <div class="price">۲۵,۰۰۰ تومان</div>
-            <button onclick="addToCart('کابل برق 2×2.5 - 1m',25000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">کلید</div>
-            <h4>کلید تک پل روکار</h4>
-            <p class="desc">کلید روکار ساده برای روشنایی</p>
-            <div class="price">۱۲,۰۰۰ تومان</div>
-            <button onclick="addToCart('کلید تک پل روکار',12000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">کلید</div>
-            <h4>کلید دو پل روکار</h4>
-            <p class="desc">کلید دوپل برای دو مدار روشنایی</p>
-            <div class="price">۱۵,۰۰۰ تومان</div>
-            <button onclick="addToCart('کلید دو پل روکار',15000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">پریز</div>
-            <h4>پریز برق ارت‌دار</h4>
-            <p class="desc">پریز سه‌پین ارت‌دار استاندارد</p>
-            <div class="price">۲۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('پریز برق ارت‌دار',20000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">فیوز</div>
-            <h4>فیوز مینیاتوری 16 آمپر</h4>
-            <p class="desc">قطع‌کننده مدار برای حفاظت تجهیزات</p>
-            <div class="price">۳۵,۰۰۰ تومان</div>
-            <button onclick="addToCart('فیوز مینیاتوری 16A',35000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">فیوز</div>
-            <h4>فیوز مینیاتوری 25 آمپر</h4>
-            <p class="desc">برای مدارهای پرتوان‌تر ساختمان</p>
-            <div class="price">۴۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('فیوز مینیاتوری 25A',40000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">تابلو</div>
-            <h4>جعبه فیوز برق ساختمان</h4>
-            <p class="desc">جعبه محافظ مدارات و قرارگیری فیوزها</p>
-            <div class="price">۷۵,۰۰۰ تومان</div>
-            <button onclick="addToCart('جعبه فیوز برق',75000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">لامپ</div>
-            <h4>لامپ LED 12 وات</h4>
-            <p class="desc">لامپ کم‌مصرف برای روشنایی داخلی</p>
-            <div class="price">۳۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('لامپ LED 12W',30000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">چراغ</div>
-            <h4>چراغ سنسوردار دیواری</h4>
-            <p class="desc">چراغ دیواری با سنسور حرکت برای صرفه‌جویی انرژی</p>
-            <div class="price">۱۵۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('چراغ سنسوردار دیواری',150000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">دزدگیر</div>
-            <h4>دزدگیر اماکن سیم‌کارتی</h4>
-            <p class="desc">سیستم دزدگیر با قابلیت ارسال SMS و تماس</p>
-            <div class="price">۲,۳۰۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('دزدگیر سیم‌کارتی',2300000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">سنسور</div>
-            <h4>سنسور حرکتی دزدگیر</h4>
-            <p class="desc">حساس به حرکت برای پوشش محیطی</p>
-            <div class="price">۳۵۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('سنسور حرکتی دزدگیر',350000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">آژیر</div>
-            <h4>آژیر پیزو دزدگیر</h4>
-            <p class="desc">آژیر هشدار با صدای بلند برای دزدگیر</p>
-            <div class="price">۸۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('آژیر پیزو دزدگیر',80000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">باتری</div>
-            <h4>باطری 12 ولت 7 آمپر</h4>
-            <p class="desc">باتری پشتیبان برای دزدگیر و تجهیزات کوچک</p>
-            <div class="price">۲۵۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('باتری 12V 7Ah',250000)">افزودن به سبد خرید</button>
-          </article>
-
-          <article class="card">
-            <div class="img-placeholder">پاور</div>
-            <h4>منبع تغذیه 12 ولت 5 آمپر</h4>
-            <p class="desc">منبع تغذیه برای دوربین‌ها و NVRها</p>
-            <div class="price">۱۸۰,۰۰۰ تومان</div>
-            <button onclick="addToCart('منبع تغذیه 12V 5A',180000)">افزودن به سبد خرید</button>
-          </article>
-        </div>
-      </div>
-
-      <!-- مشاهده سبد خرید -->
-      <div style="text-align:center; margin-top:18px;">
-        <a href="cart.html" style="color:#ffcc00; font-weight:800; text-decoration:none; font-size:1.1rem;">🛒 مشاهده سبد خرید</a>
-      </div>
-    </section>
-  </main>
-
-  <!-- footer: توضیحات + لینک‌ها + کپی‌رایت -->
-  <section class="footer-note">
-    <p style="margin-bottom:8px;">
-      <strong>توضیحات:</strong>
-      تمامی محصولات ارائه‌شده دارای گارانتی و پشتیبانی فنی توسط Best Security می‌باشند. برای سفارش تعداد بالا، نصب اختصاصی و ارائه خدمات پس از فروش با بخش پشتیبانی تماس بگیرید.
-    </p>
-    <div style="margin:8px 0;">
-      <a href="index.html">خانه</a> &nbsp; | &nbsp;
-      <a href="products.html">محصولات</a> &nbsp; | &nbsp;
-      <a href="about.html">درباره ما</a> &nbsp; | &nbsp;
-      <a href="contact.html">تماس با ما</a> &nbsp; | &nbsp;
-      <a href="cart.html">سبد خرید</a>
-    </div>
-    <div style="margin-top:10px; color:#999;">© 2025 Best Security — تمامی حقوق محفوظ است</div>
-  </section>
-
-  <!-- اسکریپت مدیریت سبد خرید (localStorage) -->
-  <script>
-    // تابع افزودن به سبد خرید — اطلاعات در localStorage ذخیره می‌شود
-    function addToCart(name, price) {
-      try {
-        let cart = JSON.parse(localStorage.getItem('bestSecurityCart')) || [];
-        cart.push({ name: name, price: price });
-        localStorage.setItem('bestSecurityCart', JSON.stringify(cart));
-        // نمایش پیام کوتاه
-        if (window.confirm(name + " به سبد خرید اضافه شد.\nنمایش سبد خرید؟")) {
-          window.location.href = 'cart.html';
-        }
-      } catch (e) {
-        alert('خطا در افزودن به سبد خرید. لطفا دوباره تلاش کنید.');
-        console.error(e);
-      }
-    }
-  </script>
-</body>
-</html>
